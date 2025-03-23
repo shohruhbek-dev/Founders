@@ -23,9 +23,10 @@ function Books() {
     };
 
     return (
-        <div className="w-full min-h-screen px-4 py-8 bg-gray-50">
-            <h1 className="font-aquire font-bold text-[96px] leading-[100%] text-center text-red-500 tracking-normal py-[20px]">Kitoblarimiz:</h1>
-
+        <div id="books" className="w-full min-h-screen px-4 py-8 bg-gray-50">
+            <h1 className="text-[#EC0000] my-[20px] font-bold text-[96px] leading-[100%] tracking-normal font-[Aquire] text-center">
+                Kitoblarimiz:
+            </h1>
             <Splide
                 options={{
                     type: 'loop',
@@ -33,14 +34,21 @@ function Books() {
                     pagination: true,
                     arrows: true,
                     gap: '1rem',
+                    autoplay: true,
+                    interval: 3000,
+                    pauseOnHover: false,
+                    resetProgress: false,
+                    speed: 1200, // smooth transition speed (ms)
+                    easing: 'ease-in-out',
                     breakpoints: {
                         768: { height: 'auto' },
                         1024: { height: '600px' },
                     },
                     height: '700px',
                 }}
-                className="rounded-2xl "
+                className="rounded-2xl px-[30px] custom-splide"
             >
+                {/* Slides */}
                 <SplideSlide>
                     <div className="w-full h-full flex flex-col">
                         <h2 className="text-2xl md:text-3xl font-bold text-center">General English</h2>
@@ -92,6 +100,9 @@ function Books() {
                     </div>
                 </SplideSlide>
             </Splide>
+
+            {/* Custom styles for arrows */}
+           
         </div>
     );
 }

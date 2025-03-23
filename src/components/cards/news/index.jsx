@@ -13,9 +13,9 @@ function News() {
 
     return (
         <div className="w-full min-h-screen px-6 py-16 mt-[20px] bg-gray-50 flex flex-col items-center">
-            <h1 className="font-aquire font-bold text-[48px] md:text-[80px] leading-tight text-center text-red-500 tracking-tight mb-12">
-                Qaynoq yangiliklar:
-            </h1>
+        
+            <h1 className="text-[#EC0000] my-[20px] font-bold text-[96px] leading-[100%] tracking-normal font-[Aquire] text-center">
+            Qaynoq yangiliklar:            </h1>
 
             <div className="w-full">
                 <Splide

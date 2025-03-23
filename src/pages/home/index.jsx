@@ -1,5 +1,6 @@
 import Books from "../../components/cards/books";
 import Course from "../../components/cards/coursesCard";
+import FAQ from "../../components/cards/faq";
 import First from "../../components/cards/firstLesson";
 import InfoCard from "../../components/cards/infoCard";
 import News from "../../components/cards/news";
@@ -17,19 +18,17 @@ function Home() {
                 <InfoCard />
             </div>
 
-            <div>
-                <h1 className="text-[#EC0000] font-[Aquire] font-bold text-[96px] leading-[100%] tracking-normal text-center">
+            <div id="about">
+                <h1 className="text-[#EC0000]  font-bold text-[96px] leading-[100%] tracking-normal font-[Aquire] text-center">
                     Biz haqimizda:
                 </h1>
-                <div className="w-full flex justify-center py-12 bg-gray-100">
-                    <div className="w-full max-w-7xl relative pb-[56.25%]"> {/* 16:9 Aspect Ratio */}
-                        <iframe
-                            src="https://www.youtube.com/embed/z7WIMyySMAE?si=VT8If3_JzDJ4yijV"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                            className="absolute top-0 left-0 w-full h-full rounded-xl shadow-xl"
-                        ></iframe>
-                    </div>
+                <div className="w-full h-full flex justify-center my-6">
+                    <iframe
+                        src="https://www.youtube.com/embed/z7WIMyySMAE?si=VT8If3_JzDJ4yijV"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="w-[90vw] h-[80vh] rounded-xl shadow-xl"
+                    ></iframe>
                 </div>
 
 
@@ -81,6 +80,9 @@ function Home() {
             </div>
             <div>
                 <News />
+            </div>
+            <div>
+                <FAQ />
             </div>
         </div>
     )

@@ -30,8 +30,10 @@ const teachersData = [
 
 function Teachers() {
     return (
-        <div className="py-8 relative">
-            <h1 className="font-aquire font-bold text-[96px] leading-[100%] text-center text-red-500 tracking-normal py-[20px]">O‘qituvchilarimiz::</h1>            <Swiper
+        <div id='teachers' className="py-8 relative">
+            <h1 className="text-[#EC0000] font-bold text-[80px] leading-[100%] tracking-normal font-[Aquire] text-center">
+                O‘qituvchilarimiz:</h1>
+            <Swiper
                 loop={true}
                 centeredSlides={true}
                 slidesPerView={3}

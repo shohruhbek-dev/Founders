@@ -56,9 +56,10 @@ const courseFromData = [
 function Course() {
   return (
     <div>
-      <h1 className="font-aquire font-bold text-[48px] md:text-[80px] leading-tight text-center text-red-500 tracking-tight mb-10">
-        Kurslarimiz:      </h1>
-      <div className="mb-10 flex md:flex-row flex-col gap-6">
+
+      <h1 id="courses" className="text-[#EC0000] my-[30px] font-bold text-[96px] leading-[100%] tracking-normal font-[Aquire] text-center">
+        Kurslarimiz:</h1>
+      <div className="mb-10 px-[20px] flex md:flex-row flex-col gap-6">
 
         {courseFromData &&
           courseFromData.map((item) => <CourseCard key={item.title} {...item} />)}

@@ -8,7 +8,13 @@ import autoprefixer from 'autoprefixer'
 export default defineConfig({
   plugins: [react(),
   tailwindcss(),
-    autoprefixer()
+  autoprefixer()
+  ], theme: {
+    extend: {
+      fontFamily: {
+        andasia: ['"Andasia Personal Use"', 'cursive'],
+      },
+    },
+  },
 
-  ],
 })
