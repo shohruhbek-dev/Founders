@@ -14,7 +14,7 @@ import Teacher7 from "/src/assets/tech7.png";
 import Teacher8 from "/src/assets/tech8.png";
 import Teacher9 from "/src/assets/tech9.png";
 
-import TeacherCard from './component/inndex';
+import TeacherCard from './component/index';
 
 const teachersData = [
     { img: Teacher1, teacher: "Iskhakova Leyla", Experience: "4 years+", IELTS: "7.0", position: "ESL Teacher | IELTS Instructor" },
@@ -30,26 +30,32 @@ const teachersData = [
 
 function Teachers() {
     return (
-        <div className="py-8 relative">
-            <h1 className="font-aquire font-bold text-[96px] leading-[100%] text-center text-red-500 tracking-normal py-[20px]">O‘qituvchilarimiz::</h1>            <Swiper
+        <div id='teachers' className="py-8 relative">
+            <h1 className="text-[#EC0000] font-bold max-[400px]:text-3xl text-4xl sm:text-6xl xl:text-[80px] tracking-normal font-[Aquire] text-center">
+                O‘qituvchilarimiz:</h1>
+            <Swiper
                 loop={true}
                 centeredSlides={true}
                 slidesPerView={3}
                 spaceBetween={30}
                 pagination={{ clickable: true }}
                 navigation={true}
-                autoplay={{ delay: 10000, disableOnInteraction: false }}
+                autoplay={{ delay: 3000, disableOnInteraction: false }}
                 modules={[Pagination, Navigation, Autoplay]}
                 breakpoints={{
                     0: { slidesPerView: 1, spaceBetween: 10 },
-                    768: { slidesPerView: 2, spaceBetween: 20 },
+                    320: { slidesPerView: 1, spaceBetween: 15 },
+                    480: { slidesPerView: 1, spaceBetween: 20 },
+                    640: { slidesPerView: 2, spaceBetween: 30 },
+                    768: { slidesPerView: 2, spaceBetween: 30 },
                     1024: { slidesPerView: 3, spaceBetween: 30 },
+                    1280: { slidesPerView: 3, spaceBetween: 40 },
                 }}
             >
                 {teachersData.map((item, index) => (
                     <SwiperSlide key={index}>
                         {({ isActive }) => (
-                            <TeacherCard
+                            <TeacherCard 
                                 img={item.img}
                                 teacher={item.teacher}
                                 IELTS={item.IELTS}
@@ -62,7 +68,6 @@ function Teachers() {
                 ))}
             </Swiper>
 
-            {/* Custom Swiper navigation buttons */}
             <style jsx>{`
                 .swiper-button-next, .swiper-button-prev {
                     background: #EC0000;

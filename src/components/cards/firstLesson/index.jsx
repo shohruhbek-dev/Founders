@@ -3,37 +3,24 @@ import mainPic from "/src/assets/mainpic.png";
 
 function First() {
     return (
-        <div className="flex flex-col-reverse md:flex-row items-center justify-between px-4 sm:px-10 md:px-20 my-[150px] mx-0 gap-8 md:gap-10">
-            <div className="flex flex-col justify-between items-start gap-4 md:gap-5 text-center md:text-left flex-[0.9]">
-                <h1 className="text-red-600 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                    Biz millatlarga umumiy tilda muloqot qilishiga yordam beramiz!
-                </h1>
-                <p className="font-medium text-base sm:text-lg md:text-xl">
-                    <b>Founders School</b> shu vaqtgacha <b>2 000+</b> o‘quvchilarni hayotini o‘zgartirishga o‘z hissasini qo‘shgan!
-                </p>
-
-                <button
-                    className="text-white bg-red-600 hover:bg-red-500 active:bg-red-700 transition-all duration-200 font-medium text-base sm:text-lg md:text-xl py-2 sm:py-3 px-5 sm:px-6 rounded-lg"
-                >
+        <section className="ielts flex flex-col-reverse md:flex-row md:mx-12 mt-24 md:mt-32 gap-14 xl:mt-44">
+            <div className="ielts-in w-full flex flex-col justify-evenly md:items-start text-center md:text-left max-md:px-4">
+                <div className="flex flex-col gap-6 xl:gap-16 lg:mt-[-50px] xl:mt-[-100px]">
+                    <h1 className="text-red-600 text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold font-[Montserrat]">
+                        Biz millatlarga umumiy tilda muloqot qilishiga yordam beramiz!
+                    </h1>
+                    <p className="font-medium text-sm md:text-xl sm:text-base xl:text-xl 2xl:text-2xl font-[Montserrat]">
+                        <b>Founders School</b> shu vaqtgacha <b>2 000+</b> o‘quvchilarni hayotini o‘zgartirishga o‘z hissasini qo‘shgan!
+                    </p>
+                </div>
+                <button className="max-w-[227px] w-full h-auto text-white font-[Montserrat] bg-red-600 hover:bg-red-500 active:bg-red-700 transition-all duration-200 font-medium text-base max-md:m-auto md:text-lg py-2 sm:py-3 rounded-lg xl:max-w-[320px] xl:text-2xl 2xl:max-w-[470px] 2xl:w-full 2xl:text-3xl">
                     Birinchi darsga yozilish
                 </button>
             </div>
-
-            <div className="relative flex-[1.1] flex items-center justify-center">
-                <div className="relative rounded-[20px] w-[280px] sm:w-[400px] md:w-[500px] lg:w-[650px] xl:w-[700px] h-[280px] sm:h-[400px] md:h-[500px] lg:h-[650px] xl:h-[700px] overflow-hidden shadow-lg z-10">
-                    <img
-                        src={mainPic}
-                        alt="image_main"
-                        className="rounded-[20px] object-cover w-full h-full"
-                    />
-                </div>
-
-                <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center z-0">
-                    <div className="absolute w-[100%] h-[100%] border-2 border-red-600 rounded-[70px] rotate-10"></div>
-                    <div className="absolute w-[100%] h-[100%] border-2 border-red-600 rounded-[70px] -rotate-10"></div>
-                </div>
+            <div className="rounded-[30px] m-auto sm:rounded-[40px] md:rounded-[50px] w-[90%] sm:w-[80%] md:max-w-[700px] xl:w-full h-auto flex justify-center">
+                <img src={mainPic} alt="image_main" className="w-[60%] max-h-[800px] h-full md:w-[100%] xl:w-[835px] rounded-[30px] sm:rounded-[40px] md:rounded-[50px]" />
             </div>
-        </div>
+        </section>
     );
 }
 

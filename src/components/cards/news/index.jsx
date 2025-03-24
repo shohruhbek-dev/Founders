@@ -12,8 +12,9 @@ function News() {
     const imgs = [news1, news2, news3, news4, kid];
 
     return (
-        <div className="w-full min-h-screen px-6 py-16 mt-[20px] bg-gray-50 flex flex-col items-center">
-            <h1 className="font-aquire font-bold text-[48px] md:text-[80px] leading-tight text-center text-red-500 tracking-tight mb-12">
+        <div className="news px-6 py-16 mt-[20px] bg-gray-50 flex flex-col items-center">
+
+            <h1 className="text-[#EC0000] my-[20px] font-bold text-4xl sm:text-6xl xl:text-[80px] leading-[100%] tracking-normal font-[Aquire] text-center">
                 Qaynoq yangiliklar:
             </h1>
 
@@ -39,12 +40,12 @@ function News() {
                 >
                     {imgs.map((item, index) => (
                         <SplideSlide key={index}>
-                            <div className="w-full h-full flex justify-center items-center py-[20px]">
-                                <div className="w-full h-[400px] bg-white rounded-xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 p-4 flex items-center justify-center">
+                            <div className="w-full h-full flex justify-center items-center">
+                                <div className="w-[405px] h-auto rounded-xl hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 p-4 flex items-center justify-center">
                                     <img
                                         src={item}
                                         alt={`News ${index + 1}`}
-                                        className="w-full h-full object-contain rounded-lg"
+                                        className="w-[400px] h-[300px] rounded-[40px]"
                                     />
                                 </div>
                             </div>

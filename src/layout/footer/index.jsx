@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
-import Logo from "../../assets/Logo (2).png";
+import Logo from "../../assets/logof.png";
 
 
 function Footer() {
     return (
-        <footer className="bg-[#EC0000] text-white text-center py-10 px-[110px] rounded-tl-[10px] rounded-tr-[10px]
- ">
-            <h1 className="font-[Andasia Personal Use]">We grow together!</h1>
+        <footer id="contact" className="bg-[#EC0000] text-white text-center py-10 xl:px-[110px] rounded-tl-[10px] rounded-tr-[10px]">
+            <h1 className="textGrow font-[Andasia Personal Use] font-normal text-4xl xl:text-[128px] leading-[100%] text-center">
+                We grow together!
+            </h1>
+
             <div className="h-[400px] w-[100%] mx-auto mt-10 border-none overflow-hidden rounded-[30px]  shadow-[20px_20px_25px_0px_#00000040]">
                 <iframe
                     title="Google Map"
@@ -18,7 +20,6 @@ function Footer() {
                     className=""
                 ></iframe>
             </div>
-
 
             <div className="flex items-center justify-between gap-10 mt-10">
                 <Link to="/" className="hidden lg:flex">
@@ -35,7 +36,7 @@ function Footer() {
                     <a href="tel: +998 71 205-53-33 ">+998 71 205-53-33</a>
                 </div>
 
-                <div className="flex flex-col gap-3 text-[26px]">
+                <div id="contact" className="flex flex-col gap-3 text-[26px]">
                     <p>Ijtimoiy tarmoqlarimiz:</p>
                     <div className="flex gap-3 justify-center items-center">
                         <i className="fa-brands fa-telegram"></i>
