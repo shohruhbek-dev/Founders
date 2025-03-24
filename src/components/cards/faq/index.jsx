@@ -46,7 +46,7 @@ function FAQ() {
     };
 
     return (
-        <div className="w-full px-[100px] mb-[100px]">
+        <div id="faq" className="w-full px-[100px] mb-[100px]">
             <h2 className="text-4xl font-bold text-center mb-8 font-[Aquire] text-[#EC0000]">FAQ</h2>
             <div className="px-[30px] border-2 border-[#EC0000] rounded-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.35)]">
                 {faqs.map((faq, index) => (
