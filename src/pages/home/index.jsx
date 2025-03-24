@@ -6,8 +6,6 @@ import First from "../../components/cards/firstLesson";
 import InfoCard from "../../components/cards/infoCard";
 import News from "../../components/cards/news";
 import Teachers from "../../components/cards/teacherCard";
-import TeacherCard from "../../components/cards/teacherCard/component/inndex";
-// import Teachers from "../../components/cards/teacherCard";
 
 function Home() {
     return (
@@ -21,9 +19,9 @@ function Home() {
                 <InfoCard />
             </div>
 
-           <div>
-            <About />
-           </div>
+            <div>
+                <About />
+            </div>
 
             <div>
                 <Teachers />
