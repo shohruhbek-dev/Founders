@@ -9,12 +9,6 @@ export default defineConfig({
   plugins: [react(),
   tailwindcss(),
   autoprefixer()
-  ], theme: {
-    extend: {
-      fontFamily: {
-        andasia: ['"Andasia Personal Use"', 'cursive'],
-      },
-    },
-  },
+  ], 
 
 })
