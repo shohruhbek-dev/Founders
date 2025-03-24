@@ -9,36 +9,23 @@ import Teachers from "../../components/cards/teacherCard";
 
 function Home() {
     return (
-        <div className="w-[100%]">
+        <>
+            <First />
 
-            <div>
-                <First />
-            </div>
+            <InfoCard />
 
-            <div>
-                <InfoCard />
-            </div>
+            <About />
 
-            <div>
-                <About />
-            </div>
+            <Teachers />
 
-            <div>
-                <Teachers />
-            </div>
-            <div>
-                <Course />
-            </div>
-            <div>
-                <Books />
-            </div>
-            <div>
-                <News />
-            </div>
-            <div>
-                <FAQ />
-            </div>
-        </div>
+            <Course />
+
+            <Books />
+
+            <News />
+
+            <FAQ />
+        </>
     )
 }
 export default Home;

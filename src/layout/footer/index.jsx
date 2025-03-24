@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
-import Logo from "../../assets/Logo (2).png";
+import Logo from "../../assets/logof.png";
 
 
 function Footer() {
     return (
-        <footer id="contact" className="bg-[#EC0000] text-white text-center py-10 px-[110px] rounded-tl-[10px] rounded-tr-[10px]
- ">
-            <h1 className="textGrow font-[Andasia Personal Use] font-normal text-[128px] leading-[100%] tracking-normal text-center">
+        <footer id="contact" className="bg-[#EC0000] text-white text-center py-10 xl:px-[110px] rounded-tl-[10px] rounded-tr-[10px]">
+            <h1 className="textGrow font-[Andasia Personal Use] font-normal text-4xl xl:text-[128px] leading-[100%] text-center">
                 We grow together!
             </h1>
 
@@ -21,7 +20,6 @@ function Footer() {
                     className=""
                 ></iframe>
             </div>
-
 
             <div className="flex items-center justify-between gap-10 mt-10">
                 <Link to="/" className="hidden lg:flex">

@@ -23,8 +23,8 @@ function Books() {
     };
 
     return (
-        <div id="books" className="w-full min-h-screen px-4 py-8 bg-gray-50">
-            <h1 className="text-[#EC0000] my-[20px] font-bold text-[96px] leading-[100%] tracking-normal font-[Aquire] text-center">
+        <div id="books" className="books px-4 bg-gray-50">
+            <h1 className="text-[#EC0000] my-[20px] font-bold text-4xl sm:text-6xl xl:text-[80px] leading-[100%] tracking-normal font-[Aquire] text-center">
                 Kitoblarimiz:
             </h1>
             <Splide
@@ -38,7 +38,7 @@ function Books() {
                     interval: 3000,
                     pauseOnHover: false,
                     resetProgress: false,
-                    speed: 1200, // smooth transition speed (ms)
+                    speed: 1200, 
                     easing: 'ease-in-out',
                     breakpoints: {
                         768: { height: 'auto' },
@@ -46,12 +46,11 @@ function Books() {
                     },
                     height: '700px',
                 }}
-                className="rounded-2xl px-[30px] custom-splide"
-            >
-                {/* Slides */}
+                className="rounded-2xl px-[30px] custom-splide">
+
                 <SplideSlide>
                     <div className="w-full h-full flex flex-col">
-                        <h2 className="text-2xl md:text-3xl font-bold text-center">General English</h2>
+                        <h2 className="text-2xl md:text-4xl 2xl:text-5xl font-[Montserrat] font-medium text-center">General English</h2>
                         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 flex-1">
                             {imgs.general.map((book, index) => (
                                 <div key={index} className="w-full h-full">
@@ -68,7 +67,7 @@ function Books() {
 
                 <SplideSlide>
                     <div className="w-full h-full flex flex-col">
-                        <h2 className="text-2xl md:text-3xl font-bold text-center">IELTS</h2>
+                        <h2 className="text-2xl md:text-4xl 2xl:text-5xl font-[Montserrat] font-medium text-center">IELTS</h2>
                         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 flex-1">
                             {imgs.ielts.map((book, index) => (
                                 <div key={index} className="w-full h-full">
@@ -85,7 +84,7 @@ function Books() {
 
                 <SplideSlide>
                     <div className="w-full h-full flex flex-col">
-                        <h2 className="text-2xl md:text-3xl font-bold text-center">Kids English</h2>
+                        <h2 className="text-2xl md:text-4xl 2xl:text-5xl font-[Montserrat] font-medium text-center">Kids English</h2>
                         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 flex-1">
                             {imgs.level.map((book, index) => (
                                 <div key={index} className="w-full h-full">
@@ -100,8 +99,6 @@ function Books() {
                     </div>
                 </SplideSlide>
             </Splide>
-
-            {/* Custom styles for arrows */}
            
         </div>
     );

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../assets/Logo (2).png";
-import BarLogo from "../../assets/Logo (5).png"; // hamburger
+import Logo from "../../assets/logof.png";
+import BarLogo from "../../assets/Logo (5).png";
 import Button from "../../components/button";
 import { Link as ScrollLink } from 'react-scroll';
 
@@ -9,8 +9,8 @@ function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="w-full bg-[#EC0000] relative z-50 px-[100px]">
-            <div className="flex items-center justify-between py-6">
+        <div className="w-[100vw] m-auto bg-[#EC0000] fixed top-0 right-0 left-0 z-50 px-5 sm:px-[50px]">
+            <div className="nav-in flex items-center justify-between py-2 sm:py-4">
                 <div className="lg:hidden flex items-center gap-3">
                     <button onClick={() => setIsOpen(true)}>
                         <img src={BarLogo} alt="Menu Icon" className="object-contain" />
@@ -18,21 +18,19 @@ function Navbar() {
                 </div>
 
                 <Link to="/" className="hidden lg:flex">
-                    <div>
-                        <img src={Logo} alt="Logo" className="w-[80%] h-auto object-contain" />
-                    </div>
+                    <img src={Logo} alt="Logo" className="w-[180px] h-auto" />
                 </Link>
 
                 <div className="hidden lg:flex flex-1 justify-center">
 
-                    <ul className="flex items-center gap-[30px] sm:gap-[20px]">
+                    <ul className="flex items-center xl:text-xl gap-[30px] sm:gap-[20px]">
                         <li>
                             <ScrollLink
                                 to="about"
                                 smooth={true}
                                 duration={500}
                                 offset={-70}
-                                className="text-white uppercase cursor-pointer font-[Aquire]"
+                                className="text-white uppercase font-[Aquire] ml-3"
                             >
                                 Biz haqimizda
                             </ScrollLink>
@@ -43,7 +41,7 @@ function Navbar() {
                                 smooth={true}
                                 duration={500}
                                 offset={-70}
-                                className="text-white uppercase text-sm font-[Aquire] cursor-pointer"
+                                className="text-white uppercase font-[Aquire] "
                             >
                                 O‘qituvchilarimiz
                             </ScrollLink>
@@ -54,7 +52,7 @@ function Navbar() {
                                 smooth={true}
                                 duration={500}
                                 offset={-70}
-                                className="text-white uppercase cursor-pointer font-[Aquire]"
+                                className="text-white uppercase font-[Aquire]"
                             >
                                 Kurslarimiz
                             </ScrollLink>
@@ -65,7 +63,7 @@ function Navbar() {
                                 smooth={true}
                                 duration={500}
                                 offset={-70}
-                                className="text-white uppercase text-sm font-[Aquire] cursor-pointer"
+                                className="text-white uppercase font-[Aquire]"
                             >
                                 Kitoblarimiz
                             </ScrollLink>
@@ -76,7 +74,7 @@ function Navbar() {
                                 smooth={true}
                                 duration={500}
                                 offset={-70}
-                                className="text-white uppercase text-sm font-[Aquire] cursor-pointer"
+                                className="text-white uppercase font-[Aquire]"
                             >
                                 FAQ
                             </ScrollLink>
@@ -87,7 +85,7 @@ function Navbar() {
                                 smooth={true}
                                 duration={500}
                                 offset={-70}
-                                className="text-white uppercase text-sm font-[Aquire] cursor-pointer"
+                                className="text-white uppercase font-[Aquire]"
                             >
                                 Kontakt
                             </ScrollLink>
@@ -96,7 +94,7 @@ function Navbar() {
 
                 </div>
 
-                <div className="flex items-center gap-3 flex-shrink-0">
+                <div className="login-btn flex items-center gap-3 ml-3 text-xl xl:text-2xl">
                     <Link to="/login">
                         <Button title="Kirish" background="bg-white" textColor="text-[#EC0000]" />
                     </Link>
@@ -111,7 +109,7 @@ function Navbar() {
             )}
 
             <div
-                className={`flex flex-col justify-between items-start pr-6 lg:hidden fixed top-0 left-0 h-full font-[Aquire] w-[60%] bg-white text-black shadow-lg transition-transform duration-300 ease-in-out z-50 ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
+                className={`mobile-menu flex flex-col justify-between items-start pr-6 lg:hidden fixed top-0 left-0 h-full font-[Aquire] w-[70%] min-[500px]:w-[60%] bg-white text-black shadow-lg transition-transform duration-300 ease-in-out z-50 ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
 
             >
                 <div className="py-6 px-5 ml-[85%]">
@@ -120,14 +118,14 @@ function Navbar() {
                     </button>
                 </div>
 
-                <ul className="flex flex-col gap-6 px-8">
+                <ul className="flex flex-col gap-6 px-6 text-[18px] min-[500px]:text-2xl">
                     <li>
                         <ScrollLink
                             to="about"
                             smooth={true}
                             duration={500}
                             offset={-70}
-                            className="uppercase text-2xl font-semibold hover:underline cursor-pointer"
+                            className="uppercase font-semibold hover:underline cursor-pointer"
                             onClick={() => setIsOpen(false)}
                         >
                             Biz haqimizda
@@ -139,7 +137,7 @@ function Navbar() {
                             smooth={true}
                             duration={500}
                             offset={-70}
-                            className="uppercase text-2xl font-semibold hover:underline cursor-pointer"
+                            className="uppercase font-semibold hover:underline cursor-pointer"
                             onClick={() => setIsOpen(false)}
                         >
                             O‘qituvchilarimiz
@@ -151,7 +149,7 @@ function Navbar() {
                             smooth={true}
                             duration={500}
                             offset={-70}
-                            className="uppercase text-2xl font-semibold hover:underline cursor-pointer"
+                            className="uppercase font-semibold hover:underline cursor-pointer"
                             onClick={() => setIsOpen(false)}
                         >
                             Kurslarimiz
@@ -163,7 +161,7 @@ function Navbar() {
                             smooth={true}
                             duration={500}
                             offset={-70}
-                            className="uppercase text-2xl font-semibold hover:underline cursor-pointer"
+                            className="uppercase font-semibold hover:underline cursor-pointer"
                             onClick={() => setIsOpen(false)}
                         >
                             Kitoblarimiz
@@ -175,7 +173,7 @@ function Navbar() {
                             smooth={true}
                             duration={500}
                             offset={-70}
-                            className="uppercase text-2xl font-semibold hover:underline cursor-pointer"
+                            className="uppercase font-semibold hover:underline cursor-pointer"
                             onClick={() => setIsOpen(false)}
                         >
                             FAQ
@@ -187,7 +185,7 @@ function Navbar() {
                             smooth={true}
                             duration={500}
                             offset={-70}
-                            className="uppercase text-2xl font-semibold hover:underline cursor-pointer"
+                            className="uppercase font-semibold hover:underline cursor-pointer"
                             onClick={() => setIsOpen(false)}
                         >
                             Kontakt
