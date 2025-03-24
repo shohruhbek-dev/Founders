@@ -3,6 +3,7 @@ import Layout from "./layout";
 import Home from "./pages/home";
 
 function Root() {
+ 
   return (
     <Layout>
       <Routes>

@@ -1,7 +1,5 @@
 import Footer from "./footer";
 import Navbar from "./navbar";
-
-
 function Layout(props) {
   const { children } = props;
 

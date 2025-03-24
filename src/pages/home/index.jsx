@@ -1,3 +1,4 @@
+import About from "../../components/cards/about";
 import Books from "../../components/cards/books";
 import Course from "../../components/cards/coursesCard";
 import FAQ from "../../components/cards/faq";
@@ -13,6 +14,7 @@ function Home() {
 
             <InfoCard />
 
+<<<<<<< HEAD
             <div id="about">
                 <h1 className="text-[#EC0000] font-bold text-4xl sm:text-6xl xl:text-[80px] leading-[100%] tracking-normal font-[Aquire] text-center">
                     Biz haqimizda:
@@ -61,6 +63,10 @@ function Home() {
                     </p>
                 </div>
 
+=======
+            <div>
+                <About />
+>>>>>>> f11dfaed869ef1e987249f1ab966bf4e56e7fd5f
             </div>
 
             <Teachers />

@@ -39,9 +39,9 @@ function Footer() {
                 <div id="contact" className="flex flex-col gap-3 text-[26px]">
                     <p>Ijtimoiy tarmoqlarimiz:</p>
                     <div className="flex gap-3 justify-center items-center">
-                        <i className="fa-brands fa-telegram"></i>
-                        <i className="fa-brands fa-instagram"></i>
-                        <i className="fa-brands fa-youtube"></i>
+                        <a target="_blank" rel="noopener noreferrer" href="https://t.me/founders_school_uz"><i className="fa-brands fa-telegram"></i></a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/founders_school?igsh=ZzZ1N3dkMWlkYWJ4"><i className="fa-brands fa-instagram"></i></a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://youtube.com/@founders_school?si=K9zOe7AUjrbLbJsy"><i className="fa-brands fa-youtube"></i></a>
                     </div>
                 </div>
 

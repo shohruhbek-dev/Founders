@@ -42,13 +42,13 @@ function FAQ() {
     const [openIndex, setOpenIndex] = useState(null);
 
     const toggle = (index) => {
-        setOpenIndex(openIndex === index ? null : index);
+        setOpenIndex(openIndex === index ? null : index);   
     };
 
     return (
-        <div className="w-full px-[30px] mb-[100px]">
-            <h2 className="font-bold text-center text-6xl xl:text-[80px] mb-8 font-[Aquire] text-[#EC0000]">FAQ</h2>
-            <h3 className="font-medium text-2xl md:text-4xl 2xl:text-5xl font-[Montserrat] text-center mb-8">Ko‘p beriladigan savollarga javob beramiz!</h3>
+<div id="faq" className="w-full px-[30px] mb-[100px]">
+    <h2 className="font-bold text-center text-6xl xl:text-[80px] mb-8 font-[Aquire] text-[#EC0000]">FAQ</h2>
+    <h3 className="font-medium text-2xl md:text-4xl 2xl:text-5xl font-[Montserrat] text-center mb-8">Ko‘p beriladigan savollarga javob beramiz!</h3>
             <div className="px-[30px] border-2 border-[#EC0000] rounded-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.35)]">
                 {faqs.map((faq, index) => (
                     <div key={index} className="border-b border-[red] mb-4">

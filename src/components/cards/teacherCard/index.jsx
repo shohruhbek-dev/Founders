@@ -1,3 +1,4 @@
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -13,7 +14,6 @@ import Teacher6 from "/src/assets/tech6.png";
 import Teacher7 from "/src/assets/tech7.png";
 import Teacher8 from "/src/assets/tech8.png";
 import Teacher9 from "/src/assets/tech9.png";
-
 import TeacherCard from './component/index';
 
 const teachersData = [
