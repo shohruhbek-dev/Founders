@@ -4,6 +4,8 @@ import CourseCard from "./components";
 import kid from "/src/assets/kid.png";
 import advanced from "/src/assets/advanced.png";
 import reading from "/src/assets/reading.png";
+import { useEffect } from "react";
+import Aos from "aos";
 
 const courseFromData = [
   {
@@ -54,9 +56,19 @@ const courseFromData = [
 ];
 
 function Course() {
+  useEffect(() => {
+    Aos.init({
+      duration: 800,
+    });
+    Aos.refresh();
+  }, []);
+
   return (
     <>
-      <h1 id="courses" className="text-[#EC0000] my-[30px] font-bold text-4xl sm:text-6xl xl:text-[80px] leading-[100%] font-[Aquire] text-center">
+      <h1
+        data-aos='fade-up'
+        id="courses"
+        className="text-[#EC0000] my-[30px] font-bold text-4xl sm:text-6xl xl:text-[80px] leading-[100%] font-[Aquire] text-center">
         Kurslarimiz:</h1>
       <div className="mb-10 px-[20px] flex lg:flex-row flex-col gap-6">
         {courseFromData &&

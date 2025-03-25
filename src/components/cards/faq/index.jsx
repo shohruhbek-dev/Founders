@@ -1,4 +1,5 @@
-import { useState } from "react";
+import Aos from "aos";
+import { useEffect, useState } from "react";
 
 const faqs = [
     {
@@ -42,14 +43,27 @@ function FAQ() {
     const [openIndex, setOpenIndex] = useState(null);
 
     const toggle = (index) => {
-        setOpenIndex(openIndex === index ? null : index);   
+        setOpenIndex(openIndex === index ? null : index);
     };
 
+    useEffect(() => {
+        Aos.init({
+            duration: 800,
+        });
+        Aos.refresh();
+    }, []);
+
     return (
-<div id="faq" className="w-full px-[30px] mb-[100px]">
-    <h2 className="font-bold text-center text-6xl xl:text-[80px] mb-8 font-[Aquire] text-[#EC0000]">FAQ</h2>
-    <h3 className="font-medium text-2xl md:text-4xl 2xl:text-5xl font-[Montserrat] text-center mb-8">Ko‘p beriladigan savollarga javob beramiz!</h3>
-            <div className="px-[30px] border-2 border-[#EC0000] rounded-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.35)]">
+        <div id="faq" className="w-full px-[30px] max-[450px]:px-2 mb-[100px]">
+            <h2
+                data-aos='fade-up'
+                className="font-bold text-center text-6xl xl:text-[80px] mb-8 font-[Aquire] text-[#EC0000]">FAQ</h2>
+            <h3
+                data-aos='fade-up'
+                className="font-medium text-2xl md:text-4xl 2xl:text-5xl font-[Montserrat] text-center mb-8">Ko‘p beriladigan savollarga javob beramiz!</h3>
+            <div
+                data-aos='zoom-in'
+                className="px-[30px] border-2 border-[#EC0000] rounded-[20px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.35)]">
                 {faqs.map((faq, index) => (
                     <div key={index} className="border-b border-[red] mb-4">
                         <button
@@ -61,7 +75,7 @@ function FAQ() {
                             >
                                 {faq.question}
                             </span>
-                            <span className="text-2xl">
+                            <span className="text-[16px] sm:text-xl xl:text-2xl">
                                 <i
                                     className={`fa-solid ${openIndex === index ? "fa-chevron-up" : "fa-chevron-down"
                                         } bg-red-600 text-amber-50 p-[5px] rounded-full`}

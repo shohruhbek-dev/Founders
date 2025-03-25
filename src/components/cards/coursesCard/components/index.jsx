@@ -1,3 +1,5 @@
+import Aos from "aos";
+import { useEffect } from "react";
 
 function CourseCard({
     title,
@@ -15,9 +17,17 @@ function CourseCard({
 }) {
     const handleNavigate = () => {
     };
+    useEffect(() => {
+        Aos.init({
+            duration: 800,
+        });
+        Aos.refresh();
+    }, []);
 
     return (
-        <div className="main-card flex flex-col gap-3 md:gap-7 mx-auto max-[500px]:mx-2 px-4 py-4 md:px-6 md:py-10 max-w-[400px] bg-white rounded-[15px] border-2 border-[#EC0000] transition-all duration-500 ease-in-out hover:scale-[1.05] hover:shadow-[0px_15px_25px_rgba(255,0,0,0.25),inset_0px_8px_15px_rgba(255,0,0,0.3)] text-left">
+        <div
+            data-aos='zoom-in'
+            className="main-card flex flex-col gap-3 md:gap-7 mx-auto max-[500px]:mx-2 px-4 py-4 md:px-6 md:py-10 max-w-[400px] bg-white rounded-[15px] border-2 border-[#EC0000] transition-all duration-500 ease-in-out hover:scale-[1.05] hover:shadow-[0px_15px_25px_rgba(255,0,0,0.25),inset_0px_8px_15px_rgba(255,0,0,0.3)] text-left">
             <div className="flex items-center gap-4 mb-3">
                 <img
                     src={img}

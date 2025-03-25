@@ -1,10 +1,6 @@
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation, Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Teacher1 from "/src/assets/tech1.png";
 import Teacher2 from "/src/assets/tech2.png";
 import Teacher3 from "/src/assets/tech3.png";
@@ -14,7 +10,7 @@ import Teacher6 from "/src/assets/tech6.png";
 import Teacher7 from "/src/assets/tech7.png";
 import Teacher8 from "/src/assets/tech8.png";
 import Teacher9 from "/src/assets/tech9.png";
-import TeacherCard from './component/index';
+import TeacherCard from "./component/index";
 
 const teachersData = [
     { img: Teacher1, teacher: "Iskhakova Leyla", Experience: "4 years+", IELTS: "7.0", position: "ESL Teacher | IELTS Instructor" },
@@ -29,64 +25,60 @@ const teachersData = [
 ];
 
 function Teachers() {
+    const settings = {
+        infinite: true,
+        speed: 500,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    };
+
     return (
-        <div id='teachers' className="py-8 relative">
-            <h1 className="text-[#EC0000] font-bold max-[400px]:text-3xl text-4xl sm:text-6xl xl:text-[80px] tracking-normal font-[Aquire] text-center">
-                O‘qituvchilarimiz:</h1>
-            <Swiper
-                loop={true}
-                centeredSlides={true}
-                slidesPerView={3}
-                spaceBetween={30}
-                pagination={{ clickable: true }}
-                navigation={true}
-                autoplay={{ delay: 3000, disableOnInteraction: false }}
-                modules={[Pagination, Navigation, Autoplay]}
-                breakpoints={{
-                    0: { slidesPerView: 1, spaceBetween: 10 },
-                    320: { slidesPerView: 1, spaceBetween: 15 },
-                    480: { slidesPerView: 1, spaceBetween: 20 },
-                    640: { slidesPerView: 2, spaceBetween: 30 },
-                    768: { slidesPerView: 2, spaceBetween: 30 },
-                    1024: { slidesPerView: 3, spaceBetween: 30 },
-                    1280: { slidesPerView: 3, spaceBetween: 40 },
-                }}
-            >
-                {teachersData.map((item, index) => (
-                    <SwiperSlide key={index}>
-                        {({ isActive }) => (
-                            <TeacherCard 
+        <div id='teachers' className="container m-auto relative text-center">
+            <h1
+                data-aos='fade-up'
+                className="text-[#EC0000] font-bold max-[400px]:text-3xl text-4xl sm:text-6xl xl:text-[80px] tracking-normal font-[Aquire]">
+                O‘qituvchilarimiz:
+            </h1>
+            <div className="mt-8 relative min-[350px]:ml-4 min-[380px]:ml-8 min-[420px]:ml-12 min-[460px]:ml-18 min-[510px]:ml-28 min-[560px]:ml-36 sm:ml-0 md:ml-12 lg:ml-0 xl:ml-28">
+                <Slider {...settings}>
+                    {teachersData.map((item, index) => (
+                        <div
+                            data-aos='zoom-in'
+                            key={index}
+                            className="px-4">
+                            <TeacherCard
                                 img={item.img}
                                 teacher={item.teacher}
                                 IELTS={item.IELTS}
                                 Experience={item.Experience}
                                 position={item.position}
-                                isActive={isActive}
                             />
-                        )}
-                    </SwiperSlide>
-                ))}
-            </Swiper>
-
-            <style jsx>{`
-                .swiper-button-next, .swiper-button-prev {
-                    background: #EC0000;
-                    color: #fff;
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 50%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    transition: all 0.3s ease;
-                }
-                .swiper-button-next:hover, .swiper-button-prev:hover {
-                    background: #c20000;
-                }
-                .swiper-button-next::after, .swiper-button-prev::after {
-                    font-size: 16px;
-                }
-            `}</style>
+                        </div>
+                    ))}
+                </Slider>
+            </div>
         </div>
     );
 }
