@@ -1,29 +1,54 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/logof.png";
-import BarLogo from "../../assets/Logo (5).png";
+import BarLogo from "../../assets/logof2.png";
 import Button from "../../components/button";
 import { Link as ScrollLink } from 'react-scroll';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    useEffect(() => {
+        AOS.init({
+            duration: 800,
+        });
+        AOS.refresh();
+    }, []);
 
     return (
-        <div className="w-[100vw] m-auto bg-[#EC0000] fixed top-0 right-0 left-0 z-50 px-5 sm:px-[50px]">
+        <div className="bg-[#EC0000] fixed top-0 right-0 shadow-2xl left-0 z-50 px-5 sm:px-[50px]">
             <div className="nav-in flex items-center justify-between py-2 sm:py-4">
-                <div className="lg:hidden flex items-center gap-3">
+                <div
+                    data-aos='flip-down'
+                    className="lg:hidden flex items-center gap-3">
                     <button onClick={() => setIsOpen(true)}>
-                        <img src={BarLogo} alt="Menu Icon" className="object-contain" />
+                        <img src={BarLogo} alt="Menu Icon" className="w-[28px] h-[30px] sm:w-[45px] sm:h-[40px]" />
                     </button>
                 </div>
 
-                <Link to="/" className="hidden lg:flex">
-                    <img src={Logo} alt="Logo" className="w-[180px] h-auto" />
+                <Link to="/" className="hidden xl:flex">
+                    <img
+                        data-aos='flip-down'
+                        src={Logo}
+                        alt="Logo"
+                        className="w-[180px] h-auto" />
+                </Link>
+
+                <Link to="/" className="hidden max-xl:flex max-lg:hidden">
+                    <img
+                        data-aos='flip-down'
+                        src={BarLogo}
+                        alt="Menu Icon"
+                        className="w-[28px] h-[30px] sm:w-[45px] sm:h-[40px]" />
                 </Link>
 
                 <div className="hidden lg:flex flex-1 justify-center">
 
-                    <ul className="flex items-center xl:text-xl gap-[30px] sm:gap-[20px]">
+                    <ul
+                        data-aos='flip-down'
+                        className="flex items-center xl:text-xl gap-[30px] sm:gap-[20px]">
                         <li>
                             <ScrollLink
                                 to="about"
@@ -94,7 +119,9 @@ function Navbar() {
 
                 </div>
 
-                <div className="login-btn flex items-center gap-3 ml-3 text-xl xl:text-2xl">
+                <div
+                    data-aos='flip-down'
+                    className="login-btn flex items-center gap-3 ml-3 text-xl xl:text-2xl">
                     <Link to="/login">
                         <Button title="Kirish" background="bg-white" textColor="text-[#EC0000]" />
                     </Link>
@@ -109,16 +136,17 @@ function Navbar() {
             )}
 
             <div
-                className={`mobile-menu flex flex-col justify-between items-start pr-6 lg:hidden fixed top-0 left-0 h-full font-[Aquire] w-[70%] min-[500px]:w-[60%] bg-white text-black shadow-lg transition-transform duration-300 ease-in-out z-50 ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
+                className={`mobile-menu flex flex-col justify-between items-start pr-6 lg:hidden fixed top-0 left-0 h-full font-[Aquire] w-[70%] min-[500px]:w-[60%] bg-white text-black shadow-lg transition-transform duration-300 ease-in-out z-50 ${isOpen ? "translate-x-0" : "-translate-x-full"}`}>
 
-            >
-                <div className="py-6 px-5 ml-[85%]">
-                    <button onClick={() => setIsOpen(false)} className="text-black text-3xl">
+                <div
+                    className="py-6 px-5 ml-[85%]">
+                    <button onClick={() => setIsOpen(false)} className="text-black text-2xl">
                         <i className="fa-solid fa-x"></i>
                     </button>
                 </div>
 
-                <ul className="flex flex-col gap-6 px-6 text-[18px] min-[500px]:text-2xl">
+                <ul
+                    className="flex flex-col gap-6 px-6 text-[18px] min-[500px]:text-2xl">
                     <li>
                         <ScrollLink
                             to="about"

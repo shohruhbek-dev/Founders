@@ -48,3 +48,7 @@
     background: #c20000;
     font-size: 16px;
 }
+
+.slick-dots{
+    display: none!important;
+}

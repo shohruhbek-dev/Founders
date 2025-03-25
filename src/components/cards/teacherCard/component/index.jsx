@@ -5,7 +5,7 @@ function TeacherCard({ img, teacher, Experience, position, IELTS, isActive }) {
             shadow-[0_8px_20px_rgba(255,0,0,0.25)] flex flex-col items-center transition-all duration-500
             ${isActive ? 'scale-120 shadow-2xl' : 'scale-100'}
         `}>
-            <div className="md:w-36 md:h-36 w-28 h-28 mx-auto overflow-hidden rounded-full border-4 bg-[#EC0000] border-[#EC0000] mb-4 transition-all duration-300 group-hover:border-[#c20000]">
+            <div className="md:w-36 md:h-36 w-20 h-20 mx-auto overflow-hidden rounded-full border-4 bg-[#EC0000] border-[#EC0000] mb-4 transition-all duration-300 group-hover:border-[#c20000]">
                 <img
                     src={img}
                     alt={teacher}

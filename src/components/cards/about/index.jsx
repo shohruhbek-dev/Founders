@@ -1,11 +1,25 @@
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 function About() {
+    useEffect(() => {
+        Aos.init({
+            duration: 800,
+        });
+        Aos.refresh();
+    }, []);
 
     return (
         <div id="about">
-            <h1 className="text-[#EC0000]  font-bold text-[96px] leading-[100%] tracking-normal font-[Aquire] text-center">
+            <h1
+                data-aos='fade-up'
+                className="text-[#EC0000] font-bold text-4xl sm:text-6xl xl:text-[80px] leading-[100%] tracking-normal font-[Aquire] text-center">
                 Biz haqimizda:
             </h1>
-            <div className="w-full h-full flex justify-center my-6">
+            <div
+                data-aos='zoom-in'
+                className="w-full h-full flex justify-center my-6">
                 <iframe
                     src="https://www.youtube.com/embed/z7WIMyySMAE?si=VT8If3_JzDJ4yijV"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -14,9 +28,10 @@ function About() {
                 ></iframe>
             </div>
 
-
-            <div className="space-y-6 px-[100px] py-[50px]">
-                <p className="font-[Montserrat] text-[#222222] font-normal text-[36px] leading-[120%] text-center">
+            <div className="space-y-6 px-[50px] pt-6 pb-10 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl ">
+                <p
+                    data-aos='zoom-in'
+                    className="font-[Montserrat] text-[#222222] font-normal leading-[120%] text-center">
                     Founders school is not just a learning center,
                     <span className="font-bold text-[#EC0000]"> it is a huge family. </span>
                     We opened our first doors for students
@@ -29,14 +44,18 @@ function About() {
                     <span className="font-bold text-[#EC0000]"> MDIST graduates. </span>
                 </p>
 
-                <p className="font-[Montserrat] text-[#222222] font-normal text-[36px] leading-[120%] text-center">
+                <p
+                    data-aos='zoom-in'
+                    className="font-[Montserrat] text-[#222222] font-normal leading-[120%] text-center">
                     Our company has taught more than
                     <span className="font-bold text-[#EC0000]"> 2000 students </span>
                     so far and made a huge number of IELTS results with its students,
                     <span className="font-bold text-[#EC0000]"> 7.0+ band scores on average. </span>
                 </p>
 
-                <p className="font-[Montserrat] text-[#222222] font-normal text-[36px] leading-[120%] text-center">
+                <p
+                    data-aos='zoom-in'
+                    className="font-[Montserrat] text-[#222222] font-normal leading-[120%] text-center">
                     The name "Founders" is not just about two friends, but also it is our
                     <span className="font-bold text-[#EC0000]"> motivated </span>
                     and
